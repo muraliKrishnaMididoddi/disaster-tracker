@@ -1,23 +1,23 @@
-# 🌍 Real-Time Disaster Misinformation Tracker
+#  Real-Time Disaster Misinformation Tracker
 
 A real-time NLP-powered system that monitors Reddit for disaster-related content, detects potential misinformation, extracts location data, and visualizes verified vs. false posts on an interactive world map.
 
-> 🛠 Built with Python, PRAW, MongoDB, Hugging Face Transformers, spaCy, and Streamlit.
+>  Built with Python, PRAW, MongoDB, Hugging Face Transformers, spaCy, and Streamlit.
 
 ---
 
-## 🚀 Features
+##  Features
 
-- ✅ Real-time Reddit stream of posts from disaster-related subreddits
-- 🧠 NLP pipeline for location extraction and fake/real classification using BERT
-- 🌐 Interactive map dashboard with location pins, labels, and confidence scores
-- 📦 MongoDB integration for persistence and enrichment tracking
-- 🔁 Automated classification of unprocessed posts
-- 🔍 Focused on disaster-related keywords like earthquakes, floods, wildfires
+-  Real-time Reddit stream of posts from disaster-related subreddits
+-  NLP pipeline for location extraction and fake/real classification using BERT
+-  Interactive map dashboard with location pins, labels, and confidence scores
+-  MongoDB integration for persistence and enrichment tracking
+-  Automated classification of unprocessed posts
+-  Focused on disaster-related keywords like earthquakes, floods, wildfires
 
 ---
 
-## 🎯 Use Case
+##  Use Case
 
 During natural disasters or geopolitical events, misinformation spreads rapidly. This tool helps:
 - First responders monitor credible alerts
@@ -27,7 +27,7 @@ During natural disasters or geopolitical events, misinformation spreads rapidly.
 
 ---
 
-## 🧩 Tech Stack
+##  Tech Stack
 
 | Layer           | Tools/Libs                                |
 |----------------|--------------------------------------------|
@@ -39,7 +39,7 @@ During natural disasters or geopolitical events, misinformation spreads rapidly.
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 disaster_tracker/
 ├── reddit_stream.py # Streams live posts to MongoDB
@@ -51,11 +51,27 @@ disaster_tracker/
 
 ---
 
-## ⚙️ How to Run
-
+## How to Run
 ### 1. Clone Repo and Install Dependencies
 
 ```bash
 git clone https://github.com/your-username/disaster-tracker.git
 cd disaster-tracker
 pip install -r requirements.txt
+```
+
+### 2. Run Streaming and NLP Scripts
+
+```bash
+python reddit_stream.py     # Streams new posts
+python nlp_classify.py      # Extracts locations, classifies, stores
+```
+
+
+### 3. Run Dashboard
+
+```bash
+streamlit run map_dashboard.py
+
+```
+
